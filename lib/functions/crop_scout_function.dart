@@ -41,7 +41,6 @@ class NewCropScoutAPI {
     Map<String, String> requestHeaders = {
 //          'Accept': 'application/json',
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
     };
     formData = FormData.fromMap({
       'plot': plot,
@@ -64,8 +63,7 @@ class NewCropScoutAPI {
     Response response = await dio.post(
       serverUrl + '/api/v1.0/crop-scout/new/',
       data: formData,
-      options:
-          Options(headers: requestHeaders, contentType: 'multipart/form-data'),
+      options: Options(headers: requestHeaders),
     );
     print(">>>>>>>>>>>>> Response content ${response.statusMessage}");
     return response;

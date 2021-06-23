@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:async';
 import 'package:agscoutapp/functions/api_urls.dart';
 import 'package:agscoutapp/functions/crops_on_farm_map_function.dart';
 import 'package:agscoutapp/screens/bottom_navigator_entry.dart';
@@ -46,7 +47,15 @@ loadScoutTypeOfflineService() async {
   await c.getScoutTypeList();
 }
 
+uploadScoutDataToServer() async {
+  var uploadData = ScoutOfflineService();
+  await uploadData.uploadScoutQueueDataToAPI();
+}
+
 void main() async {
+  const thirtySeconds = const Duration(seconds: 30);
+  new Timer.periodic(thirtySeconds, (Timer t) => {uploadScoutDataToServer()});
+
   final dbHelper = DatabaseHelper.instance;
   // Stetho.initialize();
   WidgetsFlutterBinding.ensureInitialized();
