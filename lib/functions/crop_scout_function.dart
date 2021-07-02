@@ -5,7 +5,12 @@ import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'package:agscoutapp/functions/api_urls.dart';
 
-Dio dio = new Dio();
+var options = BaseOptions(
+  connectTimeout: 5000,
+  receiveTimeout: 3000,
+);
+
+Dio dio = new Dio(options);
 FormData formData = new FormData();
 var serverUrl = Endpoints.serverUrl;
 

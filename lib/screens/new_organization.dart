@@ -51,7 +51,7 @@ class _NewOrganizationState extends State<NewOrganization> {
       var token = await getAuthToken();
       Map<String, String> requestHeaders = {
         'Authorization': 'Token $token',
-        'Content-Type': 'multipart/form-data'
+        // 'Content-Type': 'application/json; charset=utf-8'
       };
 
       try {
@@ -71,8 +71,7 @@ class _NewOrganizationState extends State<NewOrganization> {
         Response response = await dio.post(
           url,
           data: formData,
-          options: Options(
-              headers: requestHeaders, contentType: 'multipart/form-data'),
+          options: Options(headers: requestHeaders),
         );
 
         if (response.statusCode == 201) {

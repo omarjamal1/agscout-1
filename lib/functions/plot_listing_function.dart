@@ -11,7 +11,7 @@ class PlotAPI {
 
     Map<String, String> requestHeaders = {
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
+      // 'Content-Type': 'multipart/form-data'
     };
     var url = serverUrl + '/api/v1.0/plot/listing/?farm_id=$farmId';
     return http.get(url, headers: requestHeaders);

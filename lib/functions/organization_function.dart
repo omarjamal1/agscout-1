@@ -15,7 +15,7 @@ class GetOrganizationDataCountAPI {
 
     Map<String, String> requestHeaders = {
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
+      // 'Content-Type': 'multipart/form-data'
     };
     var url = '$serverUrl/api/v1.0/org-data-count/summary?org_id=$orgProfileId';
     return http.get(url, headers: requestHeaders);
@@ -30,7 +30,7 @@ class GetOrganizationProfileAPI {
 
     Map<String, String> requestHeaders = {
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
+      // 'Content-Type': 'multipart/form-data'
     };
     var url =
         '$serverUrl/api/v1.0/org-profile/my-profile?profile_id=$orgProfileId';
@@ -47,7 +47,7 @@ class UpdateOrganizationProfileAPI {
 
     Map<String, String> requestHeaders = {
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
+      // 'Content-Type': 'multipart/form-data'
     };
     FormData formData = new FormData();
     formData = FormData.fromMap({
@@ -60,8 +60,7 @@ class UpdateOrganizationProfileAPI {
     Response response = await dio.post(
       '$serverUrl/api/v1.0/org-profile/update/?profile_id=$orgProfileId',
       data: formData,
-      options:
-          Options(headers: requestHeaders, contentType: 'multipart/form-data'),
+      options: Options(headers: requestHeaders),
     );
 
     return response;

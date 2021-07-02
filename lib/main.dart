@@ -53,7 +53,7 @@ uploadScoutDataToServer() async {
 }
 
 void main() async {
-  const thirtySeconds = const Duration(seconds: 30);
+  const thirtySeconds = const Duration(seconds: 10);
   new Timer.periodic(thirtySeconds, (Timer t) => {uploadScoutDataToServer()});
 
   final dbHelper = DatabaseHelper.instance;

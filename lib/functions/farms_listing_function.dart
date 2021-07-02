@@ -14,7 +14,7 @@ class FarmAPI {
 
     Map<String, String> requestHeaders = {
       'Authorization': 'Token $token',
-      'Content-Type': 'multipart/form-data'
+      // 'Content-Type': 'multipart/form-data'
     };
     var url = serverUrl + '/api/v1.0/farm/listing/?org_id=$orgId';
     return http.get(url, headers: requestHeaders);

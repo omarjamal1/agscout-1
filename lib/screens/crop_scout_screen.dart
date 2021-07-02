@@ -460,7 +460,7 @@ class _CropScoutState extends State<CropScout> {
     getCropScoutCountFromAPIToSF();
     getScoutTypeListsFromDB();
     loadScoutDataOfflineService();
-    uploadScoutDataFromQueueService();
+    // uploadScoutDataFromQueueService();
 
     // Call scout type list offline function.
 //    loadScoutTypeOfflineService();
