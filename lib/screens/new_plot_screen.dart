@@ -62,7 +62,7 @@ class _NewPlotState extends State<NewPlot> {
             context,
             MaterialPageRoute(
                 builder: (context) => PlotListing(
-                      farmId: widget.farmId,
+                      farmId: int.parse(widget.farmId),
                     )));
       } else {
         setState(() {
