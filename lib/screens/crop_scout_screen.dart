@@ -380,7 +380,7 @@ class _CropScoutState extends State<CropScout> {
           }),
         );
 //          var data = response.data['message'];
-        displayDialog(context, 'Alert', 'Data added successfully.');
+        displayDialog(context, 'Alert', 'Agregado exitosamente.?');
 //          alertBox.successDialog(context, "$data");
 //          Navigator.pushReplacement(
 //            context,
@@ -848,7 +848,7 @@ class _CropScoutState extends State<CropScout> {
                                             });
                                             if (_currentScoutType == null)
                                               displayDialog(context, "Alert",
-                                                  "Seleccione un tipo de explorador.");
+                                                  "Tipo de conteo no seleccionado");
                                           },
 //                                      value: _currentScoutType,
 //                                      validator: (value) => value == null? 'Please fill in your gender' : null,
@@ -1067,7 +1067,7 @@ class _CropScoutState extends State<CropScout> {
                                     }
                                     if (_currentScoutType == null)
                                       displayDialog(context, "Alert",
-                                          "Seleccione un tipo de explorador");
+                                          "Tipo de conteo no seleccionado");
                                   },
                                 ),
                               ),
