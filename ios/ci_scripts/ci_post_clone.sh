@@ -22,7 +22,7 @@ flutter config --enable-macos-desktop
 flutter packages get
 
 # Update generated files
-flutter pub run build_runner build
+# flutter pub run build_runner build
 
 # Build ios app
 flutter build ios --no-codesign
