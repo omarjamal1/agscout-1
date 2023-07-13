@@ -9,9 +9,6 @@ brew install --cask flutter
 # Run Flutter doctor
 flutter doctor
 
-cd ios
-pod install
-cd ../
 
 # Enable macos
 flutter config --enable-macos-desktop
