@@ -4,7 +4,8 @@
 brew install cocoapods
 
 # Install Flutter
-brew install --cask flutter
+git clone https://github.com/flutter/flutter.git -b stable $HOME/flutter
+export PATH="$PATH:$HOME/flutter/bin"
 
 # Run Flutter doctor
 flutter doctor
